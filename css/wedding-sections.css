@@ -1081,3 +1081,54 @@
     line-height: 1.6;
     letter-spacing: 0.3px;
 }
+
+/* Mehendi venue link */
+.group-event-venue {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.group-event-venue strong {
+    color: var(--wedding-maroon);
+    font-weight: 500;
+}
+
+.group-event-venue a {
+    color: var(--wedding-maroon);
+    text-decoration: underline;
+    text-decoration-color: var(--wedding-gold);
+    text-underline-offset: 3px;
+}
+/* =========================================================
+   WEBSITE-WIDE SCROLL REVEAL
+========================================================= */
+
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    transition:
+        opacity 1s ease,
+        transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+}
+
+.scroll-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Individual event rows reveal slightly after their day card */
+.group-event-item.scroll-reveal {
+    transition-duration: 0.8s;
+}
+
+/* Respect accessibility preferences */
+@media (prefers-reduced-motion: reduce) {
+    .scroll-reveal,
+    .scroll-reveal.is-visible {
+        opacity: 1;
+        transform: none;
+        transition: none;
+        will-change: auto;
+    }
+}

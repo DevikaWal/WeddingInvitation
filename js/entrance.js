@@ -69,6 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* Never leave guests on a blank page */
     setTimeout(show, 2500);
+    
 });
 
 
@@ -109,4 +110,66 @@ document.addEventListener("DOMContentLoaded", () => {
             music.play().catch(() => {});
         }
     });
+});
+/* =========================================================
+   WEBSITE-WIDE SCROLL REVEAL ANIMATIONS
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const selectors = [
+        "#ourStory .story-visual",
+        "#ourStory .story-content",
+        "#weddingCountdown .events-page-heading",
+        "#weddingCountdown .events-intro",
+        "#weddingCountdown .group-event-day",
+        "#weddingCountdown .group-event-item",
+        "#weddingCountdown .events-countdown-wrap",
+        "#weddingCountdown .events-page-footer",
+        ".wedding-venue-section .venue-information",
+        ".wedding-venue-section .venue-photo-wrap",
+        ".wedding-venue-section .venue-contact"
+    ];
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+    entry.target.classList.add("is-visible");
+} else {
+    entry.target.classList.remove("is-visible");
+}
+        });
+    }, {
+        threshold: 0.12,
+        rootMargin: "0px 0px -40px 0px"
+    });
+
+    function revealElements(root = document) {
+        selectors.forEach(selector => {
+            root.querySelectorAll(selector).forEach(element => {
+                if (!element.classList.contains("scroll-reveal")) {
+                    element.classList.add("scroll-reveal");
+                    observer.observe(element);
+                }
+            });
+        });
+    }
+
+    // Reveal elements already present
+    revealElements();
+
+    // Also catch event cards inserted later by group-events.js
+    const eventList = document.getElementById("groupEventsList");
+
+    if (eventList) {
+        const mutationObserver = new MutationObserver(() => {
+            revealElements(eventList);
+        });
+
+        mutationObserver.observe(eventList, {
+            childList: true,
+            subtree: true
+        });
+    }
+
 });
