@@ -197,7 +197,7 @@
         translate(-50%, -50%) rotate(180deg);
     color: #c49a4a;
     font-size: 25px;
-    font-family: Georgia, serif;
+    font-family: var(--font-display);
 }
 
 /* =========================================================
@@ -206,7 +206,7 @@
 
 .welcome-intro {
     margin: 0;
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-display);
     font-size: 13px;
     font-weight: 400;
     line-height: 2.15;
@@ -221,7 +221,7 @@
 
 .welcome-names {
     margin: 24px 0 10px;
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-display);
     font-size: clamp(48px, 5vw, 82px);
     font-weight: 400;
     line-height: 1.05;
@@ -234,7 +234,7 @@
 .welcome-names .ampersand {
     display: inline-block;
     margin: 0 12px;
-    font-family: 'Great Vibes', cursive;
+    font-family: var(--font-script);
     font-size: 0.75em;
     color: #c49a4a;
     vertical-align: middle;
@@ -254,7 +254,7 @@
 .welcome-message {
     max-width: 430px;
     margin: 0 auto;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-body);
     font-size: 13px;
     font-weight: 300;
     line-height: 2;

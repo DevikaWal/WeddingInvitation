@@ -1,6 +1,12 @@
+:root {
+    --font-body: "Poppins", sans-serif;
+    --font-display: "Playfair Display", Georgia, serif;
+    --font-script: "Great Vibes", cursive;
+}
+
 body {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-body);
     background: #fdf7f5;
     overflow-x: hidden;
     opacity: 0;
@@ -118,7 +124,7 @@ body {
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     color: #fff8dc;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-body);
     font-size: 13px;
     letter-spacing: 2px;
     text-transform: uppercase;

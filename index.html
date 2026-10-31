@@ -19,8 +19,7 @@
     <link rel="stylesheet" href="css/entrance.css">
     <link rel="stylesheet" href="css/welcomepage.css">
     <link rel="stylesheet" href="css/ourStory.css">
-    <link rel="stylesheet" href="css/countdown.css">
-    <link rel="stylesheet" href="css/events.css">
+    <link rel="stylesheet" href="css/wedding-sections.css">
 </head>
 
 <body>
@@ -252,10 +251,11 @@
     <!-- ==================== OUR STORY ==================== -->
     <section id="ourStory">
 
-        <img src="photos/ourstory-top-left.png" alt="" class="story-floral story-top-left" aria-hidden="true">
+        <!-- <img src="photos/ourstory-top-left.png" alt="" class="story-floral story-top-left" aria-hidden="true"> -->
         <img src="photos/ourstory-top-right-bells.png" alt="" class="story-floral story-top-right" aria-hidden="true">
         <img src="photos/ourstory-bottom-left.png" alt="" class="story-floral story-bottom-left" aria-hidden="true">
         <img src="photos/ourstory-bottom-right.png" alt="" class="story-floral story-bottom-right" aria-hidden="true">
+        <img src="photos/ourstory-top-right-bells.png" class="story-floral story-top-left-bells" alt=""     aria-hidden="true">
 
         <div class="story-container">
 
@@ -461,110 +461,151 @@
             </div>
         </div>
     </section>
+<section id="weddingCountdown" class="wedding-countdown-section wedding-events-page">
+    <div class="wedding-floral wedding-floral--top-left" aria-hidden="true"></div>
+    <div class="wedding-floral wedding-floral--events-right" aria-hidden="true"></div>
 
-    <!-- ==================== EVENTS BEFORE THE WEDDING (filled by js/schedule.js) ==================== -->
-    <section id="eventsBefore" class="events-section" hidden>
-        <h2 class="events-heading">
-            The celebrations begin
-            <span>Join us for</span>
-        </h2>
-        <div class="events-list"></div>
-    </section>
+    <header class="events-page-heading">
+        <div class="events-page-kicker"><span></span> THE CELEBRATION BEGINS <span></span></div>
+        <h2>Our Wedding <em>Events</em></h2>
+        <img
+    src="photos/floral-divider.png"
+    class="events-floral-divider"
+    alt=""
+    aria-hidden="true">
+    </header>
 
-    <!-- ==================== WEDDING COUNTDOWN ==================== -->
-    <section id="weddingCountdown" class="wedding-countdown-section">
+    <!-- The selected invitation group's existing events are rendered here. -->
+    <div id="groupEventsList" class="group-events-list" aria-live="polite"></div>
 
-        <div class="countdown-layout">
+    <!-- Keep these IDs: countdown.js updates them every second. -->
+    <div id="weddingCountdownTimer" class="events-countdown-wrap">
+        <div class="events-countdown-label">COUNTING DOWN TO OUR FOREVER</div>
+        <div class="countdown-timer" aria-label="Wedding countdown">
+            <div class="countdown-box"><span id="countDays">000</span><small>Days</small></div>
+            <div class="countdown-box"><span id="countHours">00</span><small>Hours</small></div>
+            <div class="countdown-box"><span id="countMinutes">00</span><small>Minutes</small></div>
+            <div class="countdown-box"><span id="countSeconds">00</span><small>Seconds</small></div>
+        </div>
+        <p id="countdownClosing" class="countdown-closing">Until we begin our forever.</p>
+    </div>
 
-            <!-- WEDDING DETAILS -->
-            <div class="countdown-content">
+    <footer class="events-page-footer">
+        <p>Your presence will make our special day even more memorable.</p>
+    </footer>
 
-                <div class="countdown-ornament" aria-hidden="true">
-                    <span></span>
-                    <b>◆</b>
-                    <span></span>
-                </div>
+    <!-- Existing group-events.js expects these exact template IDs and class names. -->
+    <template id="groupEventTemplate">
+        <article class="group-event-day">
+        <header class="group-event-date">
 
-                <p class="countdown-eyebrow">
-                    THE WEDDING CELEBRATION
-                </p>
+            <div class="group-event-weekday"></div>
 
-                <h2 class="countdown-heading">
-                    The Countdown
-                    <span>Begins</span>
-                </h2>
+            <span class="group-event-number"></span>
 
-                <div
-                    class="countdown-ornament heading-ornament"
-                    aria-hidden="true">
-                    <span></span>
-                    <b>◆</b>
-                    <span></span>
-                </div>
+            <div class="group-event-month"></div>
+        </header>
+            <div class="group-event-content">
+                <h3 class="group-event-title"></h3>
+                <p class="group-event-subtitle"></p>
+                <div class="group-event-items"></div>
+            </div>
+        </article>
+    </template>
 
-                <p class="wedding-weekday">SATURDAY</p>
+    <template id="individualEventTemplate">
+        <section class="group-event-item">
+            <div class="group-event-art"></div>
+            <div class="group-event-item-copy">
+                <h4 class="group-event-name"></h4>
+                <time class="group-event-time"></time>
+                <p class="group-event-note"></p>
+            </div>
+        </section>
+    </template>
+</section>
 
-                <p class="wedding-date">
-                    05 <span>·</span> 12 <span>·</span> 2026
-                </p>
+<!-- VENUE -->
+<!-- ==================== WEDDING VENUE ==================== -->
+<section class="wedding-venue-section">
 
-                <p class="wedding-muhurta">
-                    WEDDING MUHURTA <span>·</span>
-                    <strong>12:17 PM</strong>
-                </p>
+    <div class="wedding-floral wedding-floral--venue-right"
+         aria-hidden="true"></div>
 
-                <!-- LIVE COUNTDOWN -->
-                <div class="countdown-timer" aria-label="Wedding countdown">
+    <div class="wedding-floral wedding-floral--venue-left" aria-hidden="true"></div>
 
-                    <div class="countdown-box">
-                        <span id="countDays">000</span>
-                        <small>DAYS</small>
-                    </div>
+    <div class="venue-layout">
 
-                    <div class="countdown-box">
-                        <span id="countHours">00</span>
-                        <small>HOURS</small>
-                    </div>
+        <!-- VENUE HEADING AND DETAILS -->
+        <div class="venue-information">
 
-                    <div class="countdown-box">
-                        <span id="countMinutes">00</span>
-                        <small>MINUTES</small>
-                    </div>
-
-                    <div class="countdown-box">
-                        <span id="countSeconds">00</span>
-                        <small>SECONDS</small>
-                    </div>
-
-                </div>
-
-                <p id="countdownClosing" class="countdown-closing">
-                    A beautiful new chapter awaits…
-                </p>
-
+            <div class="venue-kicker">
+                <span></span>
+                JOIN US AT
+                <span></span>
             </div>
 
-            <!-- DECORATIVE WEDDING FABRIC -->
-            <div class="countdown-photo-area countdown-drape-area">
-                <img
-                    src="photos/wedding-drape.png"
-                    alt="Burgundy and ivory embroidered wedding fabric"
-                    class="countdown-drape"
-                    loading="lazy"
-                    decoding="async">
+            <h2 class="venue-heading-title">
+                The Wedding <em>Venue</em>
+            </h2>
+
+            <div class="venue-heading-flourish" aria-hidden="true">
+                <span></span>✥<span></span>
             </div>
+
+            <h3 class="venue-name">Harshal Banquets</h3>
+
+            <p class="venue-address">
+                <span class="venue-pin" aria-hidden="true">⌖</span>
+                <span>
+                    153, Karve Road, Kothrud,<br>
+                    Pune, Maharashtra 411038
+                </span>
+            </p>
+
+            <a
+                href="https://maps.app.goo.gl/HFi67h5x9aubTNGG7?g_st=iw"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="venue-map-link"
+            >
+                <span aria-hidden="true">⌖</span>
+                View on Google Maps
+                <span aria-hidden="true">↗</span>
+            </a>
 
         </div>
-    </section>
 
-    <!-- ==================== EVENTS AFTER THE WEDDING (filled by js/schedule.js) ==================== -->
-    <section id="eventsAfter" class="events-section" hidden>
-        <h2 class="events-heading">
-            And the joy continues
-            <span>Stay with us</span>
-        </h2>
-        <div class="events-list"></div>
-    </section>
+        <!-- COUPLE PHOTOGRAPH BELOW MAP BUTTON -->
+        <div class="venue-photo-wrap">
+
+            <img
+                src="photos/our-couple-photo.jpg"
+                alt="The couple"
+                class="venue-photo"
+                loading="lazy"
+            >
+
+            <span class="venue-photo-frame" aria-hidden="true"></span>
+
+            <img
+                src="photos/floral-divider.png"
+                class="venue-photo-floral"
+                alt=""
+                aria-hidden="true"
+            >
+
+        </div>
+        <!-- OPTIONAL CONTACT DETAILS -->
+<div class="venue-contact venue-signoff">
+    <p>With love, Devika, Sushant & our families</p>
+</div>
+
+    </div>
+
+</section>
+    
+
 
     <!-- ==================== BACKGROUND MUSIC ==================== -->
     <audio id="bgMusic" loop preload="none">
@@ -572,10 +613,11 @@
     </audio>
 
     <!-- ==================== JAVASCRIPT ==================== -->
-    <script src="js/events.js" defer></script>
+    <!-- <script src="js/events.js" defer></script>  -->
     <script src="js/schedule.js" defer></script>
     <script src="js/entrance.js" defer></script>
     <script src="js/storyCarousel.js" defer></script>
+    <script src="js/group-events.js" defer></script>
     <script src="js/countdown.js" defer></script>
 
 </body>
