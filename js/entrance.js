@@ -31,16 +31,14 @@ function enterSite() {
 
     /* Start music */
     const music = document.getElementById("bgMusic");
-    music.volume = 0.5;
-    music.currentTime = 17.5;
+    music.currentTime = 60;
+    music.volume = 0;
 
-    music.play()
-        .then(() => {
-            console.log("Music started successfully");
-        })
-        .catch((error) => {
-            console.error("Music failed:", error);
-        });
+    music.play().then(() => {
+        fadeInMusic(music, 0.5, 4000);
+    }).catch(error => {
+        console.log("Music playback failed:", error);
+    });
 
     /* Show music button */
     document.getElementById("musicToggle").style.display = "flex";
@@ -111,6 +109,30 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+function fadeInMusic(audio, targetVolume = 0.5, duration = 3000) {
+    audio.volume = 0;
+
+    const steps = 60;
+    const interval = duration / steps;
+    const volumeIncrement = targetVolume / steps;
+
+    let currentStep = 0;
+
+    const fade = setInterval(() => {
+        currentStep++;
+
+        audio.volume = Math.min(
+            targetVolume,
+            currentStep * volumeIncrement
+        );
+
+        if (currentStep >= steps) {
+            clearInterval(fade);
+            audio.volume = targetVolume;
+        }
+    }, interval);
+}
 /* =========================================================
    WEBSITE-WIDE SCROLL REVEAL ANIMATIONS
 ========================================================= */
@@ -173,3 +195,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+const scrollPrompt = document.getElementById("scrollDownPrompt");
+
+if (scrollPrompt) {
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 10) {
+            scrollPrompt.classList.add("hidden");
+        } else {
+            scrollPrompt.classList.remove("hidden");
+        }
+    }, { passive: true });
+}

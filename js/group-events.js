@@ -1,4 +1,3 @@
-
 (() => {
 
     // ==========================================
@@ -78,17 +77,17 @@
 
                 events: [
                     {
-                name: "Vidhi",
-                time: "8:00 AM – 10:30 AM",
-                note: "Join us for this sacred wedding ritual.",
-                icon: "ritual"
-            },
-            {
-                name: "Baraat",
-                time: "11:15 AM",
-                note: "The groom's wedding procession.",
-                icon: "music"
-            },
+                        name: "Vidhi",
+                        time: "8:00 AM – 10:30 AM",
+                        note: "Join us for this sacred wedding ritual.",
+                        icon: "ritual"
+                    },
+                    {
+                        name: "Baraat",
+                        time: "11:15 AM",
+                        note: "The groom's wedding procession.",
+                        icon: "music"
+                    },
                     {
                         name: "Wedding Muhurta",
                         time: "12:17 PM",
@@ -105,6 +104,9 @@
                 ]
             }
         ],
+
+
+        // GROUP 3 – FAMILY
         FAMILY26: [
             {
                 date: "2026-12-03",
@@ -113,6 +115,7 @@
                 month: "December 2026",
                 heading: "Mehendi Celebrations",
                 subtitle: "An evening of colour, joy and togetherness",
+
                 events: [
                     {
                         name: "Mehendi",
@@ -130,6 +133,7 @@
                     }
                 ]
             },
+
             {
                 date: "2026-12-04",
                 weekday: "Friday",
@@ -137,6 +141,7 @@
                 month: "December 2026",
                 heading: "An Evening of Celebrations",
                 subtitle: "Let the wedding festivities begin",
+
                 events: [
                     {
                         name: "Simant Poojan",
@@ -144,93 +149,96 @@
                         note: "Join us for this beautiful pre-wedding ritual.",
                         icon: "ritual"
                     },
-            {
-                name: "Sangeet",
-                time: "7:30 PM onwards",
-                note: "An evening filled with music, dance and celebration.",
-                icon: "music"
+                    {
+                        name: "Sangeet",
+                        time: "7:30 PM onwards",
+                        note: "An evening filled with music, dance and celebration.",
+                        icon: "music"
+                    },
+                    {
+                        name: "Dinner",
+                        time: "To follow",
+                        note: "Join us for dinner and continue the celebrations.",
+                        icon: "lunch"
+                    }
+                ]
             },
+
             {
-                name: "Dinner",
-                time: "To follow",
-                note: "Join us for dinner and continue the celebrations.",
-                icon: "lunch"
+                date: "2026-12-05",
+                weekday: "Saturday",
+                day: "05",
+                month: "December 2026",
+                heading: "The Wedding Day",
+                subtitle: "A sacred union, a beautiful beginning",
+
+                events: [
+                    {
+                        name: "Vidhi",
+                        time: "8:00 AM – 10:30 AM",
+                        note: "Join us for this sacred wedding ritual.",
+                        icon: "ritual"
+                    },
+                    {
+                        name: "Baraat",
+                        time: "11:15 AM",
+                        note: "The groom's wedding procession.",
+                        icon: "music"
+                    },
+                    {
+                        name: "Wedding Muhurta",
+                        time: "12:17 PM",
+                        note: "The auspicious wedding ceremony.",
+                        image: "photos/event-mandap.png",
+                        alt: "Decorated wedding mandap illustration"
+                    },
+                    {
+                        name: "Wedding Lunch",
+                        time: "1:00 PM – 3:00 PM",
+                        note: "Let's continue the celebrations over a delicious meal.",
+                        icon: "lunch"
+                    }
+                ]
             }
-        ]
-    },
-
-    {
-        date: "2026-12-05",
-        weekday: "Saturday",
-        day: "05",
-        month: "December 2026",
-        heading: "The Wedding Day",
-        subtitle: "A sacred union, a beautiful beginning",
-
-        events: [
-            {
-                name: "Vidhi",
-                time: "8:00 AM – 10:30 AM",
-                note: "Join us for this sacred wedding ritual.",
-                icon: "ritual"
-            },
-            {
-                name: "Baraat",
-                time: "11:15 AM",
-                note: "The groom's wedding procession.",
-                icon: "music"
-            },
-            {
-                name: "Wedding Muhurta",
-                time: "12:17 PM",
-                note: "The auspicious wedding ceremony.",
-                image: "photos/event-mandap.png",
-                alt: "Decorated wedding mandap illustration"
-            },
-            {
-                name: "Wedding Lunch",
-                time: "1:00 PM – 3:00 PM",
-                note: "Let's continue the celebrations over a delicious meal.",
-                icon: "lunch"
-            }
-        ]
-    }
-],
+        ],
 
 
-        // GROUP 4 – ADD YOUR EVENTS HERE
+        // GROUP 4 – BLESSED
         BLESSED26: [
-    {
-        date: "2026-12-01",
-        weekday: "Tuesday",
-        day: "01",
-        month: "December 2026",
-        heading: "The Wedding Festivities Begin",
-        subtitle: "A day of auspicious beginnings and blessings",
-        events: [
             {
-                name: "Haldi",
-                time: "7:30 AM – 9:00 AM",
-                note: "Venue: Our Home",
-                icon: "ritual"
+                date: "2026-12-01",
+                weekday: "Tuesday",
+                day: "01",
+                month: "December 2026",
+                heading: "The Wedding Festivities Begin",
+                subtitle: "A day of auspicious beginnings and blessings",
+
+                events: [
+                    {
+                        name: "Haldi",
+                        time: "7:30 AM – 9:00 AM",
+                        note: "Venue: Our Home",
+                        icon: "ritual"
+                    },
+                    {
+                        name: "Grahamakh",
+                        time: "10:30 AM – 12:30 PM",
+                        note: "Venue: Our Home. Lunch to follow.",
+                        icon: "ritual"
+                    }
+                ]
             },
+
             {
-                name: "Grahamakh",
-                time: "10:30 AM – 12:30 PM",
-                note: "Venue: Our Home. Lunch to follow.",
-                icon: "ritual"
-            }
-        ]
-    },
-    {
-        date: "2026-12-03",
-        weekday: "Thursday",
-        day: "03",
-        month: "December 2026",
-        heading: "An Afternoon of Colour and Celebration",
-        subtitle: "Come celebrate the festivities with us",
-        events: [
-            {
+                date: "2026-12-03",
+                weekday: "Thursday",
+                day: "03",
+                month: "December 2026",
+                heading: "An Afternoon of Colour and Celebration",
+                subtitle: "Come celebrate the festivities with us",
+
+                events: [
+                    {
                         name: "Mehendi",
                         time: "6:00 PM onwards",
                         note: "Join us for an evening of beautiful celebrations.",
@@ -244,72 +252,76 @@
                         note: "Continue the celebrations over dinner.",
                         icon: "lunch"
                     }
-        ]
-    },
-    {
-        date: "2026-12-04",
-        weekday: "Friday",
-        day: "04",
-        month: "December 2026",
-        heading: "An Evening of Celebrations",
-        subtitle: "Let the wedding festivities begin",
-        events: [
+                ]
+            },
+
             {
+                date: "2026-12-04",
+                weekday: "Friday",
+                day: "04",
+                month: "December 2026",
+                heading: "An Evening of Celebrations",
+                subtitle: "Let the wedding festivities begin",
+
+                events: [
+                    {
                         name: "Simant Poojan",
                         time: "5:30 PM – 7:30 PM",
                         note: "Join us for this beautiful pre-wedding ritual.",
                         icon: "ritual"
                     },
-            {
-                name: "Sangeet",
-                time: "7:30 PM onwards",
-                note: "An evening filled with music, dance and celebration.",
-                icon: "music"
+                    {
+                        name: "Sangeet",
+                        time: "7:30 PM onwards",
+                        note: "An evening filled with music, dance and celebration.",
+                        icon: "music"
+                    },
+                    {
+                        name: "Dinner",
+                        time: "To follow",
+                        note: "Join us for dinner and continue the celebrations.",
+                        icon: "lunch"
+                    }
+                ]
             },
+
             {
-                name: "Dinner",
-                time: "To follow",
-                note: "Join us for dinner and continue the celebrations.",
-                icon: "lunch"
+                date: "2026-12-05",
+                weekday: "Saturday",
+                day: "05",
+                month: "December 2026",
+                heading: "The Wedding Day",
+                subtitle: "A sacred union, a beautiful beginning",
+
+                events: [
+                    {
+                        name: "Vidhi",
+                        time: "8:00 AM – 10:30 AM",
+                        note: "Join us for this sacred wedding ritual.",
+                        icon: "ritual"
+                    },
+                    {
+                        name: "Baraat",
+                        time: "11:15 AM",
+                        note: "The groom's wedding procession.",
+                        icon: "music"
+                    },
+                    {
+                        name: "Wedding Muhurta",
+                        time: "12:17 PM",
+                        note: "The auspicious wedding ceremony.",
+                        image: "photos/event-mandap.png",
+                        alt: "Decorated wedding mandap illustration"
+                    },
+                    {
+                        name: "Wedding Lunch",
+                        time: "1:00 PM – 3:00 PM",
+                        note: "Let's continue the celebrations over a delicious meal.",
+                        icon: "lunch"
+                    }
+                ]
             }
         ]
-    },
-    {
-        date: "2026-12-05",
-        weekday: "Saturday",
-        day: "05",
-        month: "December 2026",
-        heading: "The Wedding Day",
-        subtitle: "A sacred union, a beautiful beginning",
-        events: [
-            {
-                name: "Vidhi",
-                time: "8:00 AM – 10:30 AM",
-                note: "Join us for this sacred wedding ritual.",
-                icon: "ritual"
-            },
-            {
-                name: "Baraat",
-                time: "11:15 AM",
-                note: "The groom's wedding procession.",
-                icon: "music"
-            },
-            {
-                name: "Wedding Muhurta",
-                time: "12:17 PM",
-                note: "The auspicious wedding ceremony.",
-                image: "photos/event-mandap.png",
-                alt: "Decorated wedding mandap illustration"
-            },
-            {
-                name: "Wedding Lunch",
-                time: "1:00 PM – 3:00 PM",
-                note: "Let's continue the celebrations over a delicious meal.",
-                icon: "lunch"
-            }
-        ]
-    }
-]
 
     };
 
@@ -319,12 +331,53 @@
     // ==========================================
 
     const params = new URLSearchParams(window.location.search);
-
     const requestedCode = params.get("invite");
 
     const selectedGroup = groups[requestedCode]
         ? requestedCode
         : "ROYAL26";
+
+
+    // ==========================================
+    // UPDATE MAIN EVENTS HEADING
+    // Preserve the original heading font and markup
+    // ==========================================
+
+    const eventsHeading = document.querySelector(
+        "#weddingCountdown .events-page-heading h2"
+    );
+
+    if (eventsHeading) {
+
+    const headingAccent = eventsHeading.querySelector("span, em");
+
+    // Change only the text nodes, retaining the original styled element.
+    if (headingAccent) {
+
+        Array.from(eventsHeading.childNodes).forEach(node => {
+            if (node.nodeType === Node.TEXT_NODE) {
+                node.remove();
+            }
+        });
+
+        eventsHeading.insertBefore(
+            document.createTextNode(
+                selectedGroup === "ROYAL26" ? "Ceremony" : "Our Wedding "
+            ),
+            headingAccent
+        );
+
+        headingAccent.textContent =
+            selectedGroup === "ROYAL26" ? " Details" : "Events";
+
+    } else {
+
+        eventsHeading.textContent =
+            selectedGroup === "ROYAL26"
+                ? "Ceremony Details"
+                : "Our Wedding Events";
+    }
+}
 
 
     // ==========================================
@@ -419,25 +472,27 @@
         item.querySelector(".group-event-time").textContent = event.time;
 
         const noteElement = item.querySelector(".group-event-note");
-noteElement.textContent = event.note || "";
+        noteElement.textContent = event.note || "";
 
-if (event.venue) {
-    const venueLine = document.createElement("span");
-    venueLine.className = "group-event-venue";
+        if (event.venue) {
 
-    const venueLabel = document.createElement("strong");
-    venueLabel.textContent = "Venue: ";
+            const venueLine = document.createElement("span");
+            venueLine.className = "group-event-venue";
 
-    const venueLink = document.createElement("a");
-    venueLink.href = event.venueUrl;
-    venueLink.textContent = event.venue;
-    venueLink.target = "_blank";
-    venueLink.rel = "noopener noreferrer";
+            const venueLabel = document.createElement("strong");
+            venueLabel.textContent = "Venue: ";
 
-    venueLine.append(venueLabel, venueLink);
-    noteElement.appendChild(document.createElement("br"));
-    noteElement.appendChild(venueLine);
-}
+            const venueLink = document.createElement("a");
+            venueLink.href = event.venueUrl;
+            venueLink.textContent = event.venue;
+            venueLink.target = "_blank";
+            venueLink.rel = "noopener noreferrer";
+
+            venueLine.append(venueLabel, venueLink);
+
+            noteElement.appendChild(document.createElement("br"));
+            noteElement.appendChild(venueLine);
+        }
 
         return fragment;
     }
