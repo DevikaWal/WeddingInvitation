@@ -78,13 +78,13 @@
                 events: [
                     {
                         name: "Vidhi",
-                        time: "8:00 AM – 10:30 AM",
+                        time: "7:30 AM – 10:00 AM",
                         note: "Join us for this sacred wedding ritual.",
                         icon: "ritual"
                     },
                     {
                         name: "Baraat",
-                        time: "11:15 AM",
+                        time: "11:00 AM",
                         note: "The groom's wedding procession.",
                         icon: "music"
                     },
@@ -175,13 +175,13 @@
                 events: [
                     {
                         name: "Vidhi",
-                        time: "8:00 AM – 10:30 AM",
+                        time: "7:30 AM – 10:00 AM",
                         note: "Join us for this sacred wedding ritual.",
                         icon: "ritual"
                     },
                     {
                         name: "Baraat",
-                        time: "11:15 AM",
+                        time: "11:00 AM",
                         note: "The groom's wedding procession.",
                         icon: "music"
                     },
@@ -296,13 +296,13 @@
                 events: [
                     {
                         name: "Vidhi",
-                        time: "8:00 AM – 10:30 AM",
+                        time: "7:30 AM – 10:00 AM",
                         note: "Join us for this sacred wedding ritual.",
                         icon: "ritual"
                     },
                     {
                         name: "Baraat",
-                        time: "11:15 AM",
+                        time: "11:00 AM",
                         note: "The groom's wedding procession.",
                         icon: "music"
                     },
